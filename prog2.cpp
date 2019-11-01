@@ -118,18 +118,18 @@ int main()
 	cout << compareFail << " compares. Average: " << (compareFail / wordsNotFound) << endl;
 	cout << "There are " << skipped << " words not checked." << endl;
 
-	ifstream("misspelled.txt");
-	int msize = misspelled.size();
+	ofstream misspelledF ("misspelled.txt");
+	int msize = misspelled	.size();
 	for (int i = 0; i < msize; i++)
 	{
-		cout << misspelled[i] << endl;
+		misspelledF << misspelled[i];
 	}
 	dictionary.~WordTree();
 }
 
 string cleanWord(string& word)
 {
-	transform(word.begin(), word.end(), word.begin(), [] (unsigned char c) {return std::tolower(c);
+	transform(word.begin(), word.end(), word.begin(), [] (unsigned char c) {return std::tolower(c);} );
 	string cleaned = "";
 	int length = word.length();
 
