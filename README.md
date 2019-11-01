@@ -6,8 +6,8 @@ Name: Ben Wabschall
 
 Competing: YES 
 
-how to compile on linux: alter transform function
+how to compile on linux: g++ std=c++11 prog2.cpp 
 
-Best run time: ~1 second (~20 seconds for dictionary constr)
+Best run time: ~1.9 seconds
 
 Anything that doesn't work:
