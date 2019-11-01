@@ -129,7 +129,7 @@ int main()
 
 string cleanWord(string& word)
 {
-	transform(word.begin(), word.end(), word.begin(), tolower);
+	transform(word.begin(), word.end(), word.begin(), [] (unsigned char c) {return std::tolower(c);
 	string cleaned = "";
 	int length = word.length();
 
